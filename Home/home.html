@@ -1,0 +1,138 @@
+https://github.com/analara552/WEB_ProjetoI.git
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="EstiloHome.css" />
+
+
+</head>
+
+<body>
+
+    <main class="principal">
+        <div class='content'>
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="msg">
+                        <center>
+                            <h1>Deixe seu recado!</h1>
+                        </center>
+                    </div>
+
+                    <form>
+                        <section class="cont-form">
+                            <p class="nome">
+                                <br> <label for="nome">Nome  </label><br>
+                                <input type="text" name="" id='nome' placeholder="Informe seu nome" required="required" /><br>
+                            </p>
+
+                            <p class="mensagem">
+                                <br><label for="mensagem"> Mensagem  </label><br>
+                                <input type="text" name="" id='mensagem' placeholder="Deixe sua mensagem" /><br>
+                            </p>
+
+                            <p class="enviar">
+                                <br><input type="button" name="" value='Enviar' onclick="enviar()" class="btn-enviar" />
+                            </p>
+                        </section>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div clas="col-12">
+                    <div clas="to-do-list-box">
+                        <ul id="mylist">
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <script type="text/javascript">
+        var ul = document.getElementById("mylist");
+        var li;
+        var itemId;
+        var item;
+        enviar = function() {
+
+            if ((document.getElementById("nome").value != "") && (document.getElementById("mensagem").value != "")) {
+
+                item = document.getElementById("nome");
+                mensagem = document.getElementById("mensagem");
+                var elemento = item.value + ' : ' + mensagem.value + '   '
+
+                itemId = ul.childElementCount;
+
+                li = createItemEl(elemento, itemId);
+                li.appendChild(createRemoveTaskBtn(itemId));
+                ul.appendChild(li);
+                item.value = "";
+            }
+
+        }
+
+        removeTask = function(itemId) {
+
+            for (i = 0; i < ul.children.length; i++) {
+
+                if (ul.children[i].getAttribute("index") == itemId) {
+
+                    ul.children[i].remove();
+
+                }
+            }
+        }
+
+        createItemEl = function(itemValue, itemId) {
+
+            let li = document.createElement("li");
+
+            li.setAttribute("index", itemId);
+            li.style.fontFamily = 'fira-code'
+            li.style.fontSize = '20px'
+            li.style.listStyle = 'none'
+
+            li.appendChild(document.createTextNode(itemValue));
+
+            return li;
+        }
+
+        createRemoveTaskBtn = function(itemId) {
+            let btn = document.createElement("button");
+            btn.setAttribute("onclick", "removeTask(" + itemId + ")");
+            btn.innerHTML = "Excluir";
+            btn.style.color = "salmon"
+            return btn;
+        }
+
+        function exibeAlerta() {
+            alert("Desenvolvimento de Software para Web\n Ana Lara Silva Oliveira")
+        }
+    </script>
+
+
+</body>
+<footer>
+    <div class="Evento">
+        <button onclick="exibeAlerta()">Créditos</button>
+    </div>
+</footer>
+
+</html>

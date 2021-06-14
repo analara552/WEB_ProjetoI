@@ -1,0 +1,66 @@
+body {
+    background-color: pink;
+}
+
+div {
+    color: cornsilk;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1.5;
+    background-color: salmon;
+    color: cornsilk;
+}
+
+.principal {
+    margin-left: 0%;
+    text-align: center;
+}
+
+form {
+    width: 420px;
+    font-size: 16px;
+    background-color: cornsilk;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px 10px;
+    text-align: left;
+}
+
+input {
+    width: 400px;
+    padding: 5px;
+}
+
+.enviar input {
+    background-color: salmon;
+    color: cornsilk;
+    height: 40px;
+    width: 70px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.enviar input:hover {
+    background-color: palevioletred;
+}
+
+.cont-form label {
+    color: salmon;
+}
+
+.Evento button {
+    background-color: salmon;
+    color: cornsilk;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+}

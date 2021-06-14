@@ -1,0 +1,31 @@
+    body {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: pink;
+    }
+    
+    #menu {
+        list-style: none;
+        padding: 0%;
+        width: 500px;
+        margin-top: 1.5em;
+        background-color: salmon;
+    }
+    
+    #menu li {
+        display: inline;
+    }
+    
+    #menu li a {
+        color: rgb(245, 237, 241);
+        padding: 10px;
+        display: inline-block;
+        text-decoration: none;
+        transform: background .3s;
+    }
+    
+    #menu li a:hover {
+        background-color: palevioletred;
+    }
